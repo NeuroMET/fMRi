@@ -46,6 +46,6 @@ BATCH.Denoising.overwrite = 1;
 BATCH.Analysis.overwrite = 1;
 BATCH.Analysis.sources = {'networks.DefaultMode.PCC'};
 BATCH.Analysis.type = [1 2];
-BATCH.Analysis.done = 0;
+BATCH.Analysis.done = 1;
 
 conn_batch(BATCH);
