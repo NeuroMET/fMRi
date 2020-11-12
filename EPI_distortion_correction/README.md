@@ -1,16 +1,13 @@
 # Fieldmap distortion correction
-# ================================
 
 Magnetic field inhomogeneities distortion correction with field maps for rsfMRI BOLDs
 
 ## Requirements
-## ==============
 
 1) MatLab ()
 2) SPM12
 
 ## Example usage
-## ==============
 
 ### Accepted directory structure
 ```
