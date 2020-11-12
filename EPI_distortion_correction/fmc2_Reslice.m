@@ -15,7 +15,7 @@ function y = fmc2_Reslice(path, subject)
     % •	Output directory: Selection needs to be made in the right window!
 
     %%
-    subjectnr = str2num(subject(9:11));
+    %subjectnr = randperm(1);
     nii4d_path = strcat(path, '/', subject, '/bold');
     nii3d_path = strcat(path, '/', subject, '/bold/3D_bold');
     fieldmap_path = strcat(path, '/', subject, '/fieldmap');
@@ -41,8 +41,9 @@ function y = fmc2_Reslice(path, subject)
     matlabbatch{1}.spm.spatial.coreg.write.roptions.mask = 0;
     matlabbatch{1}.spm.spatial.coreg.write.roptions.prefix = 'r';
 
-    batch{subjectnr} = matlabbatch;
-    spm_jobman('run', batch{subjectnr});
+    %batch{subjectnr} = matlabbatch;
+    %spm_jobman('run', batch{subjectnr});
+    spm_jobman('run', matlabbatch);
     toc;
 end
     
