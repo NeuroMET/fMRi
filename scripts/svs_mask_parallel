@@ -1,0 +1,28 @@
+#!/bin/bash
+
+n_jobs=$1
+
+source ~/.bashrc
+conda activate mrs
+
+mrs_niis=($(ls -1 ./sub*/*/mrs/*.rda))
+
+do_the_job() {
+
+  mrs_nii=$1
+  t1="$( ls $(dirname "$(dirname "$mrs_nii")")/anat/*.nii.gz)"
+  echo $t1
+  bids_root="/data/gpfs-1/users/dellorca_c/scratch/NeuroMET"
+  der_dir="svs_masks"
+  der_path="$bids_root/derivatives/$der_dir"
+  dest_path="${mrs_nii/'..'/$der_path}"
+  dest_dir=$(dirname $dest_path)
+  fname=$(basename "$mrs_nii")
+
+  mkdir -p $dest_dir
+  svs_segment -t $t1 -o $dest_dir -f $fname -m $mrs_nii
+}
+export -f do_the_job
+
+
+parallel -j $n_jobs do_the_job ::: "${mrs_niis[@]}"
