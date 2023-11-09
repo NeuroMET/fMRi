@@ -1,3 +1,9 @@
+
+
+[![DOI](https://zenodo.org/badge/204970637.svg)](https://zenodo.org/doi/10.5281/zenodo.10091099)
+
+
+
 # Resting state functional MRI: connectivity measurements in the NeuroMET projects
 This is the code repository which was created for the paper “Plasma p-Tau181 and GFAP track 7T MR-based changes in Alzheimer’s disease”, Göschel L, 2023.
 
