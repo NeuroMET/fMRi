@@ -1,7 +1,7 @@
 # Resting state functional MRI: connectivity measurements in the NeuroMET projects
 This is the code repository which was created for the paper “Plasma p-Tau181 and GFAP track 7T MR-based changes in Alzheimer’s disease”, Göschel L, 2023.
 
-###### 1. Preprocessing (fMRIprep, see scripts/fmriprepcmd)
+###### 1. Preprocessing (fMRIprep, see fmri/fmriprepcmd for the command and  fmriprep/example_fmriprep.html for the preoprocessing description)
 An example fMRIprep output file can be found under example_fmriprep.html. The pipeline is described in the method section of this file.
 
 ###### 2. Denoising, matrix extraction and averaging across networks (see notebooks/Functional_connectivities.ipynb)
